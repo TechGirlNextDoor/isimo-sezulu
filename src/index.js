@@ -27,7 +27,7 @@ function search(event) {
       "Saturday"
     ];
 
-    let day = days[date.getDay()];
+    let day = date.getDay();
   
     let formattedDay = days[day];
     return `${formattedDay} ${hours}:${minutes}`;
