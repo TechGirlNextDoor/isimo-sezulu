@@ -1,10 +1,3 @@
-function search(event) {
-    event.preventDefault();
-    let searchInputElement = document.querySelector("#search-input");
-    let cityElement = document.querySelector("#current-city");
-    cityElement.innerHTML = searchInputElement.value;
-  }
-  
   function formatDate(date) {
     let minutes = date.getMinutes();
     let hours = date.getHours();
@@ -55,7 +48,7 @@ function search(event) {
   
   function searchCity(city) {
     let apiKey = "b683364f99eed30b29obcftfaa3f43bb";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(refreshData);
   }
   
@@ -66,12 +59,18 @@ function search(event) {
     searchCity(searchInput.value);
   }
   
+  function search(event) {
+    event.preventDefault();
+    let searchInputElement = document.querySelector("#search-input");
+    let cityElement = document.querySelector("#current-city");
+    cityElement.innerHTML = searchInputElement.value;
+  }
   
   let searchForm = document.querySelector("#search-form");
   searchForm.addEventListener("submit", search);
   
-  let currentDateELement = document.querySelector("#current-date");
-  let currentDate = new Date();
+  //let currentDateELement = document.querySelector("#current-date");
+  //let currentDate = new Date();
   
   currentDateELement.innerHTML = formatDate(currentDate);
-  searchCity("Paris");
+  searchCity("Johannesburg");
