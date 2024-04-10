@@ -1,4 +1,4 @@
-  //searchCity("Cape Town");
+  searchCity("Johannesburg");
   let searchForm = document.querySelector("#search-form");
   searchForm.addEventListener("submit", handleSearchSubmit);
   
