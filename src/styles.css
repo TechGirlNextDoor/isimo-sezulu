@@ -48,6 +48,15 @@ body {
   
   .current-temperature {
     font-size: 48px;
+    display: flex;
+  }
+
+  .current-temperature-unit{
+    margin-top: 50PX;
+  }
+
+  #icon{
+    margin-top: 10px;
   }
   
   .current-weather {
@@ -96,4 +105,5 @@ body {
   
     color: rgba(39, 33, 66, 0.4);
   }
-  
+
+ 
